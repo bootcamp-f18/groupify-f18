@@ -34,14 +34,17 @@ angular.module('app').factory('studentService', ['nameService', function(nameSer
 
   function addStudent(name) {
     data.push(name);
-    classSize = data.length;
-    console.log(classSize);
+    this.classSize = data.length;
+    shuffledData = shuffle(data.slice());
   }
 
   function removeStudent(name) {
-    data.splice(name, 1);
-    classSize = data.length;
-    console.log(classSize);
+    var i = data.indexOf(name);
+    if ( i > -1) {
+      data.splice(i, 1);
+      this.classSize = data.length;
+      shuffledData = shuffle(data.slice());
+    }
   }
 
   function getStudents() {
@@ -49,14 +52,8 @@ angular.module('app').factory('studentService', ['nameService', function(nameSer
   }
 
   function reshuffle() {
-    console.log('studentService:reshuffle');
     shuffledData = shuffle(data.slice());
   }
-
-  // function getShuffledStudents() {
-  //   console.log('studentService:getShuffledStudents');
-  //   return shuffle(data.slice());
-  // }
 
   // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
   function shuffle(array) {
@@ -79,7 +76,6 @@ angular.module('app').factory('studentService', ['nameService', function(nameSer
   }
 
   function groupify(groupSize) {
-    console.log("studentService:groupify");
     var groups = [];
     for ( var i=0; i<shuffledData.length; i+= groupSize ) {
       var name = nameService.getName();

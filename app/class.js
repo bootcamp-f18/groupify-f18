@@ -11,7 +11,7 @@ function classController($scope, studentService) {
     }
   };
 
-  $scope.removeStudent = function() {
+  $scope.removeStudent = function($event) {
     studentService.removeStudent(this.student);
   };
 

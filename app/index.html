@@ -47,7 +47,7 @@
     <h3 class="text-center">Groups</h3>
     <form id="groupSize" class="form-inline">
       <label for="group_size">Group size</label>
-      <input class="form-control" id="group_size" type="number" ng-model="groupSize" min="2" max="{{classSize/2}}" ng-change="reshuffle()">
+      <input class="form-control" id="group_size" type="number" ng-model="groupSize" min="2" max="{{classSize}}" ng-change="reshuffle()">
       <button class="btn btn-default" ng-click="reshuffle()">Shuffle</button>
     </form> 
     <br />

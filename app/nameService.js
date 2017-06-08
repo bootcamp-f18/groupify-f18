@@ -15,7 +15,6 @@ angular.module('app').factory('nameService', function() {
   };
 
   function getName() {
-    console.log("nameService:nameGroup");
     var adjective = adjectives[getRandomInt(0, adjectives.length)];
     var animal = animals[getRandomInt(0, animals.length)];
     return adjective + ' ' + animal;
