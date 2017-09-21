@@ -1,18 +1,17 @@
 angular.module('app').factory('studentService', ['nameService', function(nameService) {
 
   var data = [
-    'Ben',
-    'Blake',
-    'Brandon',
-    'Cha\'sed',
-    'Daebrion',
-    'David C.',
-    'David H.',
-    'Joshua',
-    'Mark',
-    'Robbie',
-    'Sean',
-    'Stoooo'
+    'Erin',
+    'Rachel',
+    'Jonathan',
+    'Ashley',
+    'Tanner',
+    'Nick',
+    'Clark',
+    'Melanie',
+    'Gavin',
+    'Harrison',
+    'Casey'
   ];
 
   var shuffledData = shuffle(data.slice());
