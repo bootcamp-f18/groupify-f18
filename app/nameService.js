@@ -2,12 +2,14 @@ angular.module('app').factory('nameService', function() {
 
   var animals = [
     'Pandas', 'Bunnies', 'Squirrels', 'Otters', 'Unicorns',
-    'Chupacabras', 'Chipmunks', 'Slugs', 'Chickens', 'Bears'
+    'Chupacabras', 'Chipmunks', 'Chickens', 'Bears',
+    'Tegus', 'Turtles', 'Octopuses', 'Cheetahs'
   ];
-  
+
   var adjectives = [
     'Happy', 'Smiling', 'Giggling', 'Sparkly', 'Dancing',
-    'Unconcerned', 'Introspective', 'Pretty', 'Silly', 'Zippy'
+    'Unconcerned', 'Introspective', 'Pretty', 'Silly', 'Zippy',
+    'Dangerous', 'Krispy', 'Juicy'
   ];
 
   return {
